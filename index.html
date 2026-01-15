@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis 学习指南 | 终极版</title>
+    <title>数学分析自学指南 | Rudin & Munkres</title>
     <style>
         :root {
             --primary-color: #2c3e50;
             --accent-color: #3498db;
             --munkres-color: #27ae60;
-            --practice-color: #e67e22; /* 活力橙，代表刷题 */
+            --practice-color: #e67e22;
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #333;
@@ -36,6 +36,7 @@
             margin: 0;
             font-family: "Georgia", serif;
             font-size: 2.2rem;
+            letter-spacing: 1px;
         }
 
         header p {
@@ -202,8 +203,8 @@
 <body>
 
     <header>
-        <h1>Analysis Survival Guide</h1>
-        <p>Complete Roadmap: Rudin, Munkres & Practice</p>
+        <h1>Mathematical Analysis</h1>
+        <p>A Curated Learning Path: From Baby Rudin to Manifolds</p>
     </header>
 
     <nav>
@@ -221,15 +222,15 @@
                 <h3 style="margin-top:0">🗺️ 推荐学习路线</h3>
                 <div class="roadmap-step step-rudin">
                     <strong>Phase 1: 基础夯实</strong><br>
-                    使用 <em>Baby Rudin</em> 学习 Ch 1-7。配合 Schaum 做基础练习，Abbott 做辅助理解。
+                    使用 <em>Baby Rudin</em> 学习 Ch 1-7 (实数、序列、级数、连续、微分、积分)。
                 </div>
                 <div class="roadmap-step step-switch">
-                    <strong>🔀 战略转移 (Critical Switch)</strong><br>
-                    Rudin 第 7 章结束后，停止阅读 Rudin。跳过其第 9-10 章。
+                    <strong>🔀 路线切换</strong><br>
+                    在完成 Rudin 第 7 章后，建议跳过其后半部分，转而使用更现代的教材学习多元微积分。
                 </div>
                 <div class="roadmap-step step-munkres">
-                    <strong>Phase 2: 多元微积分</strong><br>
-                    切换至 <em>James Munkres: Analysis on Manifolds</em>。配合 Francis Su 的 Math 132 视频。
+                    <strong>Phase 2: 多元微积分与流形</strong><br>
+                    切换至 <em>James Munkres: Analysis on Manifolds</em>。配合 Ted Shifrin 的课程视频，从 $\mathbb{R}^n$ 拓扑学起。
                 </div>
             </div>
         </section>
@@ -241,7 +242,7 @@
                     <div>
                         <span class="tag">视频 · 核心</span>
                         <h3>Francis Su - Math 131</h3>
-                        <p>Harvey Mudd College 的 Analysis I。这是目前全网讲 Rudin 前半部分最好的入门视频。</p>
+                        <p>Harvey Mudd College 的 Analysis I。全网公认讲 Rudin 前半部分最好的入门视频，概念解释极具启发性。</p>
                     </div>
                     <a href="https://www.youtube.com/playlist?list=PL04BA7A9EB907EDAF" target="_blank" class="btn">Math 131 播放列表</a>
                 </div>
@@ -249,7 +250,7 @@
                     <div>
                         <span class="tag">辅助教材</span>
                         <h3>Understanding Analysis</h3>
-                        <p>Stephen Abbott 著。如果 Rudin 的前几章让你感到窒息，先读这本书的对应章节。</p>
+                        <p>Stephen Abbott 著。如果 Rudin 的前几章过于抽象，建议先读本书对应章节建立直觉。</p>
                     </div>
                     <a href="#" class="btn" style="background-color: #95a5a6;">自行搜索 PDF</a>
                 </div>
@@ -271,25 +272,25 @@
                     <div>
                         <span class="tag">教材 · 核心</span>
                         <h3>Analysis on Manifolds</h3>
-                        <p>James Munkres 著。公认的最佳多元微积分入门书。替代 Rudin Ch 9-10。</p>
+                        <p>James Munkres 著。最佳多元微积分入门书。清晰解释了由 $\mathbb{R}^n$ 到流形、微分形式及 Stokes 定理的过渡。</p>
                     </div>
                     <a href="#" class="btn munkres-btn" style="background-color: #95a5a6;">自行搜索 PDF</a>
                 </div>
                 
                 <div class="card munkres-style">
                     <div>
-                        <span class="tag">视频 · 完美衔接</span>
-                        <h3>Francis Su - Math 132</h3>
-                        <p><strong>重点推荐！</strong>Francis Su 的后续课程，专门讲解 Munkres 这本书。无缝衔接 Math 131。</p>
+                        <span class="tag">视频 · 深度课程</span>
+                        <h3>Ted Shifrin - Math 3510</h3>
+                        <p>UGA 教授 Shifrin 的多元微积分课程。深度覆盖流形与微分形式，完美配合 Munkres 的学习深度。</p>
                     </div>
-                    <a href="https://www.youtube.com/playlist?list=PL0492F05D8A3897C6" target="_blank" class="btn munkres-btn">Math 132 播放列表</a>
+                    <a href="https://www.youtube.com/watch?v=fnjKUVJHRxE" target="_blank" class="btn munkres-btn">观看课程视频</a>
                 </div>
 
                 <div class="card munkres-style">
                     <div>
                         <span class="tag">习题解答</span>
                         <h3>Munkres Solutions</h3>
-                        <p>社区维护的 Munkres 习题解答。此书习题几何感强，参考解答非常有帮助。</p>
+                        <p>社区维护的 Munkres 习题解答。此书习题侧重几何理解，参考解答有助于核对证明思路。</p>
                     </div>
                     <a href="https://github.com/9beach/analysis-on-manifolds-solutions" target="_blank" class="btn munkres-btn">GitHub 解答仓库</a>
                 </div>
@@ -303,23 +304,23 @@
                     <div>
                         <span class="tag">基础操练</span>
                         <h3>Schaum's Outline</h3>
-                        <p><strong>Real Variables 版本。</strong> Rudin 不教你计算？这里有几百道 $\epsilon-\delta$ 和级数计算题，帮你建立肌肉记忆。</p>
+                        <p><strong>推荐 Advanced Calculus 版本。</strong> 如果手头是 <em>Real Variables</em> 版，建议仅参考 Ch.1 的基础练习，避免提早进入后半部分的测度论内容。</p>
                     </div>
-                    <a href="https://www.amazon.com/Schaums-Outline-Variables-Murray-Spiegel/dp/0070602212" target="_blank" class="btn practice-btn">查看书籍信息</a>
+                    <a href="https://www.amazon.com/Schaums-Outline-Advanced-Calculus-Third/dp/0071623663" target="_blank" class="btn practice-btn">查看正确版本</a>
                 </div>
                 <div class="card practice-style">
                     <div>
                         <span class="tag">真题实战</span>
                         <h3>Harvard Math 112 Exams</h3>
-                        <p>哈佛大学的 Analysis 1 往年试卷。难度适中，非常适合在学完每一章后用来模拟自测。</p>
+                        <p>哈佛大学 Real Analysis 往年试卷（Denis Auroux 2019）。包含期中、期末真题及完整官方解答，适合模拟自测。</p>
                     </div>
-                    <a href="https://people.math.harvard.edu/~ctm/home/text/class/harvard/112/112.html" target="_blank" class="btn practice-btn">访问试卷库</a>
+                    <a href="https://people.math.harvard.edu/~auroux/112s19/" target="_blank" class="btn practice-btn">访问试卷库</a>
                 </div>
                 <div class="card practice-style">
                     <div>
                         <span class="tag">高阶挑战</span>
                         <h3>Berkeley Problems in Math</h3>
-                        <p>伯克利博士资格考真题集。只看 Real Analysis 章节。短小精悍，技巧性极强，适合高手进阶。</p>
+                        <p>伯克利博士资格考真题集。锁定 Real Analysis 章节。题目短小精悍且技巧性极强，适合进阶挑战。</p>
                     </div>
                     <a href="#" class="btn practice-btn" style="background-color: #95a5a6;">自行搜索 PDF</a>
                 </div>
@@ -331,9 +332,9 @@
             <div class="grid">
                 <div class="card">
                     <div>
-                        <span class="tag">Rudin 补充</span>
+                        <span class="tag">Rudin 伴读</span>
                         <h3>George Bergman 讲义</h3>
-                        <p>UC Berkeley 教授编写的 Rudin 伴读讲义，纠正错误并提供思路。</p>
+                        <p>UC Berkeley 教授编写的 Rudin 补充讲义，详细指出了书中的细微错误并提供了关键的习题提示。</p>
                     </div>
                     <a href="https://math.berkeley.edu/~gbergman/ug.hndts/" target="_blank" class="btn">下载 PDF</a>
                 </div>
@@ -341,7 +342,7 @@
                     <div>
                         <span class="tag">MIT OCW</span>
                         <h3>MIT 18.100B / 18.101</h3>
-                        <p>MIT 的 Analysis I (Rudin) 和 Analysis II (Munkres) 课程主页，包含大量作业题。</p>
+                        <p>MIT 的 Analysis I (Rudin) 和 Analysis II (Munkres) 课程存档，包含额外的阅读计划和作业集。</p>
                     </div>
                     <a href="https://ocw.mit.edu/search/?q=analysis" target="_blank" class="btn">访问 OCW</a>
                 </div>
@@ -351,9 +352,8 @@
     </div>
 
     <footer>
-        <p>Created for self-learners of Real Analysis. <br>资源版权归原作者所有。</p>
+        <p>Resource Collection for Mathematical Analysis.</p>
     </footer>
 
 </body>
 </html>
-
