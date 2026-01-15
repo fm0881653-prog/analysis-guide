@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Analysis 学习指南 | Rudin & Munkres</title>
+    <title>Analysis 学习指南 | 终极版</title>
     <style>
         :root {
             --primary-color: #2c3e50;
             --accent-color: #3498db;
-            --munkres-color: #27ae60; /* 给 Munkres 部分一个清新的绿色，代表“新天地” */
+            --munkres-color: #27ae60;
+            --practice-color: #e67e22; /* 活力橙，代表刷题 */
             --bg-color: #f8f9fa;
             --card-bg: #ffffff;
             --text-color: #333;
@@ -89,11 +90,8 @@
             justify-content: space-between;
         }
         
-        /* Munkres 专区样式 */
-        #munkres .section-title {
-            color: var(--munkres-color);
-            border-bottom-color: var(--munkres-color);
-        }
+        #munkres .section-title { color: var(--munkres-color); border-bottom-color: var(--munkres-color); }
+        #practice .section-title { color: var(--practice-color); border-bottom-color: var(--practice-color); }
 
         .grid {
             display: grid;
@@ -118,9 +116,9 @@
             box-shadow: 0 8px 15px rgba(0,0,0,0.1);
         }
 
-        /* 样式变体 */
         .card.rudin-style { border-top-color: var(--accent-color); }
         .card.munkres-style { border-top-color: var(--munkres-color); }
+        .card.practice-style { border-top-color: var(--practice-color); }
 
         .card h3 {
             margin-top: 0;
@@ -139,10 +137,8 @@
             font-weight: bold;
         }
         
-        .card.munkres-style .tag {
-            background: #e8f8f0;
-            color: var(--munkres-color);
-        }
+        .card.munkres-style .tag { background: #e8f8f0; color: var(--munkres-color); }
+        .card.practice-style .tag { background: #fff5eb; color: var(--practice-color); }
 
         .card p {
             font-size: 0.95rem;
@@ -161,17 +157,12 @@
             margin-top: 15px;
             transition: background 0.3s;
         }
-
-        .btn:hover {
-            background-color: var(--accent-color);
-        }
         
-        .btn.munkres-btn {
-            background-color: var(--munkres-color);
-        }
-        .btn.munkres-btn:hover {
-            background-color: #219150;
-        }
+        .btn:hover { background-color: var(--accent-color); }
+        .btn.munkres-btn { background-color: var(--munkres-color); }
+        .btn.munkres-btn:hover { background-color: #219150; }
+        .btn.practice-btn { background-color: var(--practice-color); }
+        .btn.practice-btn:hover { background-color: #d35400; }
 
         .roadmap-box {
             background: #fff;
@@ -201,7 +192,7 @@
             margin-top: 60px;
             border-top: 1px solid #eee;
         }
-        
+
         @media (max-width: 600px) {
             header h1 { font-size: 1.8rem; }
             nav { justify-content: flex-start; overflow-x: auto; white-space: nowrap; }
@@ -212,13 +203,14 @@
 
     <header>
         <h1>Analysis Survival Guide</h1>
-        <p>Part I: Baby Rudin (Ch 1-7) &nbsp;|&nbsp; Part II: James Munkres</p>
+        <p>Complete Roadmap: Rudin, Munkres & Practice</p>
     </header>
 
     <nav>
         <a href="#roadmap">学习路线图</a>
-        <a href="#rudin">Part I: 单变量 (Rudin)</a>
-        <a href="#munkres">Part II: 多元 (Munkres)</a>
+        <a href="#rudin">Part I: Rudin</a>
+        <a href="#munkres">Part II: Munkres</a>
+        <a href="#practice">题库与实战</a>
         <a href="#notes">其他资源</a>
     </nav>
 
@@ -229,15 +221,15 @@
                 <h3 style="margin-top:0">🗺️ 推荐学习路线</h3>
                 <div class="roadmap-step step-rudin">
                     <strong>Phase 1: 基础夯实</strong><br>
-                    使用 <em>Baby Rudin</em> 学习 Ch 1-7 (实数、序列、级数、连续、微分、积分、函数序列)。
+                    使用 <em>Baby Rudin</em> 学习 Ch 1-7。配合 Schaum 做基础练习，Abbott 做辅助理解。
                 </div>
                 <div class="roadmap-step step-switch">
                     <strong>🔀 战略转移 (Critical Switch)</strong><br>
-                    在完成 Rudin 第 7 章后，<strong>停止阅读 Rudin</strong>。不要进入第 9-10 章。
+                    Rudin 第 7 章结束后，停止阅读 Rudin。跳过其第 9-10 章。
                 </div>
                 <div class="roadmap-step step-munkres">
-                    <strong>Phase 2: 多元微积分与流形</strong><br>
-                    切换至 <em>James Munkres: Analysis on Manifolds</em>。这本书将带你从 $\mathbb{R}^n$ 的拓扑讲起，直到广义 Stokes 定理。
+                    <strong>Phase 2: 多元微积分</strong><br>
+                    切换至 <em>James Munkres: Analysis on Manifolds</em>。配合 Francis Su 的 Math 132 视频。
                 </div>
             </div>
         </section>
@@ -279,7 +271,7 @@
                     <div>
                         <span class="tag">教材 · 核心</span>
                         <h3>Analysis on Manifolds</h3>
-                        <p>James Munkres 著。公认的最佳多元微积分入门书。替代 Rudin Ch 9-10，清晰解释了由 $\mathbb{R}^n$ 到流形的过渡。</p>
+                        <p>James Munkres 著。公认的最佳多元微积分入门书。替代 Rudin Ch 9-10。</p>
                     </div>
                     <a href="#" class="btn munkres-btn" style="background-color: #95a5a6;">自行搜索 PDF</a>
                 </div>
@@ -288,27 +280,48 @@
                     <div>
                         <span class="tag">视频 · 完美衔接</span>
                         <h3>Francis Su - Math 132</h3>
-                        <p><strong>重点推荐！</strong>这是 Francis Su 继 Math 131 之后的后续课程 (Analysis II)，<strong>专门讲解 Munkres 这本书</strong>。风格一致，无缝衔接。</p>
+                        <p><strong>重点推荐！</strong>Francis Su 的后续课程，专门讲解 Munkres 这本书。无缝衔接 Math 131。</p>
                     </div>
                     <a href="https://www.youtube.com/playlist?list=PL0492F05D8A3897C6" target="_blank" class="btn munkres-btn">Math 132 播放列表</a>
                 </div>
 
                 <div class="card munkres-style">
                     <div>
-                        <span class="tag">名校课程</span>
-                        <h3>MIT 18.101 - Analysis II</h3>
-                        <p>MIT 的“流形分析”课程，指定教材即为 Munkres。包含教学大纲、阅读计划和作业题（Assignments）。</p>
-                    </div>
-                    <a href="https://ocw.mit.edu/courses/18-101-analysis-ii-fall-2005/" target="_blank" class="btn munkres-btn">访问 MIT OCW</a>
-                </div>
-
-                <div class="card munkres-style">
-                    <div>
                         <span class="tag">习题解答</span>
                         <h3>Munkres Solutions</h3>
-                        <p>社区维护的 Munkres 习题解答。由于此书习题计算量较大且注重几何理解，参考解答非常有帮助。</p>
+                        <p>社区维护的 Munkres 习题解答。此书习题几何感强，参考解答非常有帮助。</p>
                     </div>
                     <a href="https://github.com/9beach/analysis-on-manifolds-solutions" target="_blank" class="btn munkres-btn">GitHub 解答仓库</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="practice">
+            <h2 class="section-title">💪 题库与实战 (Practice)</h2>
+            <div class="grid">
+                <div class="card practice-style">
+                    <div>
+                        <span class="tag">基础操练</span>
+                        <h3>Schaum's Outline</h3>
+                        <p><strong>Real Variables 版本。</strong> Rudin 不教你计算？这里有几百道 $\epsilon-\delta$ 和级数计算题，帮你建立肌肉记忆。</p>
+                    </div>
+                    <a href="https://www.amazon.com/Schaums-Outline-Variables-Murray-Spiegel/dp/0070602212" target="_blank" class="btn practice-btn">查看书籍信息</a>
+                </div>
+                <div class="card practice-style">
+                    <div>
+                        <span class="tag">真题实战</span>
+                        <h3>Harvard Math 112 Exams</h3>
+                        <p>哈佛大学的 Analysis 1 往年试卷。难度适中，非常适合在学完每一章后用来模拟自测。</p>
+                    </div>
+                    <a href="https://people.math.harvard.edu/~ctm/home/text/class/harvard/112/112.html" target="_blank" class="btn practice-btn">访问试卷库</a>
+                </div>
+                <div class="card practice-style">
+                    <div>
+                        <span class="tag">高阶挑战</span>
+                        <h3>Berkeley Problems in Math</h3>
+                        <p>伯克利博士资格考真题集。只看 Real Analysis 章节。短小精悍，技巧性极强，适合高手进阶。</p>
+                    </div>
+                    <a href="#" class="btn practice-btn" style="background-color: #95a5a6;">自行搜索 PDF</a>
                 </div>
             </div>
         </section>
@@ -320,17 +333,17 @@
                     <div>
                         <span class="tag">Rudin 补充</span>
                         <h3>George Bergman 讲义</h3>
-                        <p>虽然你不看 Rudin 后半部分了，但这份讲义对 Rudin 前半部分依然是神级辅助。</p>
+                        <p>UC Berkeley 教授编写的 Rudin 伴读讲义，纠正错误并提供思路。</p>
                     </div>
                     <a href="https://math.berkeley.edu/~gbergman/ug.hndts/" target="_blank" class="btn">下载 PDF</a>
                 </div>
                 <div class="card">
                     <div>
-                        <span class="tag">参考书</span>
-                        <h3>Calculus on Manifolds</h3>
-                        <p>Spivak 著。这是 Munkres 的前身，更薄、更难。如果你想挑战极简主义风格，可以作为 Munkres 的补充阅读。</p>
+                        <span class="tag">MIT OCW</span>
+                        <h3>MIT 18.100B / 18.101</h3>
+                        <p>MIT 的 Analysis I (Rudin) 和 Analysis II (Munkres) 课程主页，包含大量作业题。</p>
                     </div>
-                    <a href="#" class="btn" style="background-color: #95a5a6;">自行搜索资源</a>
+                    <a href="https://ocw.mit.edu/search/?q=analysis" target="_blank" class="btn">访问 OCW</a>
                 </div>
             </div>
         </section>
@@ -338,7 +351,7 @@
     </div>
 
     <footer>
-        <p>Created for self-learners of Real Analysis. <br>Guide Structure: Rudin (Part I) + Munkres (Part II).</p>
+        <p>Created for self-learners of Real Analysis. <br>资源版权归原作者所有。</p>
     </footer>
 
 </body>
